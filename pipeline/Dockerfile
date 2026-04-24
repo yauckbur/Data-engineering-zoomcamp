@@ -16,7 +16,7 @@ RUN uv sync --locked
 
 
 #Copy pipeline script into working directory
-COPY pipeline.py .
+COPY ingest_data.py .
 
 #Commands to run once docker container starts
-ENTRYPOINT ["python", "pipeline.py"]
+ENTRYPOINT ["python", "ingest_data.py"]
