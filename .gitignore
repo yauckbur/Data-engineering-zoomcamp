@@ -222,6 +222,11 @@ __marimo__/
 target/
 dbt_packages/
 logs/
+<<<<<<< HEAD
+# end dbt Cloud content
+dbt_internal_packages/
+=======
 
 # macOS
 .DS_Store
+>>>>>>> 04d32efde56e905c375813c31b2079acb4e788ab
