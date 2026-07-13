@@ -23,7 +23,8 @@ SELECT
     CAST(tolls_amount AS NUMERIC) AS tolls_amount,
     CAST(improvement_surcharge AS NUMERIC) AS improvement_surcharge,
     CAST(total_amount AS NUMERIC) AS total_amount,
-    CAST(payment_type AS INT64) AS payment_type
+    CAST(payment_type AS INT64) AS payment_type,
+    CAST(ehail_fee AS NUMERIC) AS ehail_fee
 
 FROM {{ source('raw_data', 'green_tripdata') }}
 WHERE vendorid IS NOT NULL

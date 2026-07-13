@@ -13,6 +13,7 @@ SELECT
     store_and_fwd_flag,
     CAST(passenger_count AS INT64) AS passenger_count,
     CAST(trip_distance AS FLOAT64) AS trip_distance,
+    1 AS trip_type, -- yellow taxis can only be hailed on street therefore trip type =1 
 
     -- payment info 
     CAST(fare_amount AS NUMERIC) AS fare_amount,
@@ -21,6 +22,7 @@ SELECT
     CAST(tip_amount AS NUMERIC) AS tip_amount,
     CAST(tolls_amount AS NUMERIC) AS tolls_amount,
     CAST(improvement_surcharge AS NUMERIC) AS improvement_surcharge,
+    0 AS ehail_fee, --yellow taxis do not have ehail fees
     CAST(total_amount AS NUMERIC) AS total_amount,
     CAST(payment_type AS INT64) AS payment_type
 FROM {{ source('raw_data', 'yellow_tripdata') }}
