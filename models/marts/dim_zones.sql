@@ -1,5 +1,5 @@
 WITH taxi_zone_lookup AS (
-    SELECT * FROM {{'taxi_zone_lookup'}}
+    SELECT * FROM {{ref('taxi_zone_lookup')}}
 ),
 
 renamed AS (
