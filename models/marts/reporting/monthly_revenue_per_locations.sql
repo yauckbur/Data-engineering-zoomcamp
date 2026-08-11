@@ -1,1 +1,1 @@
-SELECT 1 AS placeholder
+SELECT * FROM {{ref('stg_green_tripdata')}}
