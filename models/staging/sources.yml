@@ -3,9 +3,10 @@ version: 2
 sources:
   - name: raw_data #arbitrary name for the source
     description: "raw data sources for NYC taxi rides"
-    database: kestra-sandbox-500216 #BigQuery project ID
+    database: kestra-sandbox-504814 #BigQuery project ID
     schema: zoomcamp #Dataset name
     tables:
       - name: green_tripdata
       - name: yellow_tripdata
+      - name: fhv_tripdata
 
